@@ -1,14 +1,14 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import Input from '../Input/Input'
-import { Button, Container, FormContainer, OrContainer, PageTitle, Signup } from './styles'
+import { Button, Container, FormContainer, OrContainer, PageTitle,  } from '../Login/styles'
 
 import * as Yup from 'yup'
 import {yupResolver} from '@hookform/resolvers/yup'
 import { HookFormInput } from '../HookFormInput'
 import { HiOutlineLockClosed, HiOutlineMail } from 'react-icons/hi';
-import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../Context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 interface FormData {
   email: string;
@@ -23,7 +23,7 @@ const schema = Yup.object().shape({
  password: Yup.string().required('Password é requerido')
 })
 
-function Login() {
+function SignUp() {
   const {
     control,
     handleSubmit,
@@ -33,27 +33,29 @@ function Login() {
     resolver: yupResolver(schema)
   });
 
-  const { login } = useAuth()
 
-  async function HandleLogin(form: FormData) {
-     await  login(form)
-  
+  const {register} = useAuth()
+  async function HandleSignUp(form: FormData) {
+    await register(form)
+
   }
 
+
   const navigate = useNavigate()
-  function HandleSignUp() {
-    navigate('/signup')
+
+  function HandleLogin() {
+    navigate('/login')
   }
 
   return (
     <Container>
         <span>JS-Extension</span>
-        <PageTitle>Login</PageTitle>
-        <FormContainer onSubmit={handleSubmit(HandleLogin)}>
+        <PageTitle>SignUp</PageTitle>
+        <FormContainer onSubmit={handleSubmit(HandleSignUp)}>
           <HookFormInput label='Email' error={errors.email?.message} control={control} id='email' type='email' icon={<HiOutlineMail/>}/>
           <HookFormInput label='Password' error={errors.password?.message} control={control} id='password' type='password' icon={<HiOutlineLockClosed/>}/>
 
-          <Button type='submit'>Login</Button>
+          <Button type='submit'>SignUp</Button>
 
           <OrContainer>
             <div>
@@ -61,7 +63,7 @@ function Login() {
             </div>
           
         </OrContainer>
-        <Signup onClick={HandleSignUp}>Sign Up</Signup>
+        <Button type='submit' onClick={HandleLogin}>Login</Button>
         </FormContainer>
         
         
@@ -69,4 +71,4 @@ function Login() {
   )
 }
 
-export default Login
+export default SignUp

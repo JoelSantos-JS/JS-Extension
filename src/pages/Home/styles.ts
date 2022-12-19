@@ -26,7 +26,7 @@ export const Header = styled.header`
   svg:last-child {
     width: 3rem;
     height: 1.5rem;
-
+    cursor: pointer;
     &:hover {
       color: ${({ theme }) => theme.orange};
     }
