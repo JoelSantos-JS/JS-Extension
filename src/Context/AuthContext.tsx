@@ -4,7 +4,7 @@ import { createContext, ReactNode, useContext, useEffect, useState } from "react
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { useLoading } from "./LoadingContext";
-
+import toast from "react-hot-toast";
 interface AuthCtxData {
     user: IUser | null;
     register: (credentials: SignCredentials) => Promise<void>
@@ -49,6 +49,7 @@ export function AuthProvider({children}: AuthCtxProps) {
             navigate('/login')
         } catch (error) {
                 console.log(error)
+                toast.error("An unexpected error occurred");
         }finally {
             toggleLoading(false)
         }
@@ -68,6 +69,7 @@ export function AuthProvider({children}: AuthCtxProps) {
            navigate('/')
         }catch (err) {
             console.log(err)
+            toast.error("An unexpected error occurred");
         } finally {
             toggleLoading(false)
         }
@@ -86,6 +88,7 @@ export function AuthProvider({children}: AuthCtxProps) {
             navigate('/')
         } catch (error) {
                 console.log(error)
+                toast.error("Email or password incorrect!");
         }finally {
             toggleLoading(false)
         }

@@ -7,6 +7,7 @@ import { useLoading } from "./LoadingContext";
 import {addDoc, collection, CollectionReference, deleteDoc, doc, getDocs, query, where} from 'firebase/firestore'
 import { db } from "../config/firebase";
 import { useAuth } from "./AuthContext";
+import toast from "react-hot-toast";
 
 interface ListCtxData {
     currentVideo: Ivideo
@@ -51,9 +52,12 @@ export function ListProvider({children}: ListCtxProps) {
                 ...data,
                 docId: response.id
             }] )
+
+            toast.success("Video successfully added to the list!");
             
         } catch (error) {
                 console.log(error)
+                toast.error("An unexpected error occurred while adding to the list");
         } finally {
             toggleLoading(false)
         }
@@ -61,17 +65,18 @@ export function ListProvider({children}: ListCtxProps) {
 
 
     async function deleteList(itemId: string) {
-        if(isLoading) return
+        if(isLoading) return;
         try {
-            toggleLoading(true)
-            const itemDoc = doc(db , "videos" , itemId)
-            await deleteDoc(itemDoc)
-
-            setList(old => old.filter(video => video.id !== itemId))
-        } catch (error) {
-            console.log(error)
-        }finally {
-            toggleLoading(false)
+          toggleLoading(true);
+          const itemDoc = doc(db, "videos", itemId);
+          await deleteDoc(itemDoc);
+    
+          setList(old => old.filter(video => video.docId !== itemId));
+          toast.success("Video successfully deleted!");
+        } catch (err) {
+          toast.error("An unexpected error occurred");
+        } finally {
+          toggleLoading(false);
         }
     }
 
@@ -89,6 +94,7 @@ export function ListProvider({children}: ListCtxProps) {
             setList(formatedData)
             
         } catch (error) {
+            toast.error("An unexpected error occurred while getting your list");
             
         }finally {
             toggleLoading(false)

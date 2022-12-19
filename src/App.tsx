@@ -7,6 +7,7 @@ import { LoadingProvider } from './Context/LoadingContext';
 import Loading from './Components/Loading';
 import { AuthProvider } from './Context/AuthContext';
 import { ListProvider } from './Context/ListContext';
+import { StyledToaster } from './Components/Styletoaster';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
      <ThemeProvider theme={theme}>
         <GlobalStyles />
         <PagesWrapper >
+          <StyledToaster />
           <Loading/>
             <RoutesComponent />
 
