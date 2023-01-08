@@ -2,7 +2,7 @@
 
 
 
-<img src="https://uploaddeimagens.com.br/images/004/288/478/original/15.JPG?1673186879" width="2000" align="center" />
+<img src="https://uploaddeimagens.com.br/images/004/288/478/original/15.JPG?1673186879" width="600" align="center" />
 
 &nbsp;
 
