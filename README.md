@@ -8,7 +8,7 @@
 
 ## 📚 Informações sobre o projeto
 
-* O projeto se resume em uma extensão para o Google Chrome onde o usuário cria uma conta e consegue salvar vídeos para assistir mais tarde. A inspiraçao foi o [Blog Zuber Dunge](https://blog.zuberdunge.tech/batlist-a-watchlist-extension-for-youtube#heading-problems-i-faced) e do canal do [GB Dev](https://www.youtube.com/c/GBDev)
+* O projeto se resume em uma extensão para o Google Chrome onde o usuário cria uma conta e consegue salvar vídeos para assistir mais tarde. Toda inspiraçao do desenvolvimento foi feito durante um [Projeto](https://blog.zuberdunge.tech/batlist-a-watchlist-extension-for-youtube#heading-problems-i-faced) e do canal do [GB Dev](https://www.youtube.com/c/GBDev)
 
 &nbsp;
 
@@ -23,7 +23,9 @@
 
 ## 🎨 Telas do projeto
 
-<img src="https://user-images.githubusercontent.com/71772559/164887794-892552fc-7cbe-467b-b7ba-40db331dd56c.png" width="2000" align="center" />
+<img src="https://uploaddeimagens.com.br/images/004/288/472/original/12.JPG?1673186558" width="200" align="center" />
+<img src="https://uploaddeimagens.com.br/images/004/288/473/original/13.JPG?1673186694" width="200" align="center" />
+<img src="https://uploaddeimagens.com.br/images/004/288/474/original/14.JPG?1673186719" width="200" align="center" />
 
 &nbsp;
 
