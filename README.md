@@ -8,7 +8,7 @@
 
 ## 📚 Informações sobre o projeto
 
-* O projeto se resume em uma extensão para o Google Chrome onde o usuário cria uma conta e consegue salvar vídeos para assistir mais tarde. Todo o desenvolvimento foi feito durante uma [série](https://www.youtube.com/playlist?list=PLY_G6KZ7jlfWmevP7a4jB7x7w1UQScBvx) do canal do [GB Dev](https://www.youtube.com/c/GBDev)
+* O projeto se resume em uma extensão para o Google Chrome onde o usuário cria uma conta e consegue salvar vídeos para assistir mais tarde. Toda inspiraçao do desenvolvimento foi feito durante um [Projeto](https://blog.zuberdunge.tech/batlist-a-watchlist-extension-for-youtube#heading-problems-i-faced) e do canal do [GB Dev](https://www.youtube.com/c/GBDev)
 
 &nbsp;
 
@@ -39,4 +39,4 @@
 
 ---
 
-<p align="center">Feito com 💙 por <a href="https://www.gbdev.me/">Gabriel Borges</a></p>
+
