@@ -2,7 +2,7 @@
 
 
 
-<img src="https://uploaddeimagens.com.br/images/004/288/478/original/15.JPG?1673186879" width="600" align="center" />
+<img src="https://uploaddeimagens.com.br/images/004/288/478/original/15.JPG?1673186879" width="2000" align="center" />
 
 &nbsp;
 
@@ -23,10 +23,11 @@
 
 ## 🎨 Telas do projeto
 
+<div display="flex">
 <img src="https://uploaddeimagens.com.br/images/004/288/472/original/12.JPG?1673186558" width="200" align="center" />
 <img src="https://uploaddeimagens.com.br/images/004/288/473/original/13.JPG?1673186694" width="200" align="center" />
 <img src="https://uploaddeimagens.com.br/images/004/288/474/original/14.JPG?1673186719" width="200" align="center" />
-
+</div>
 &nbsp;
 
 ## 🛠️ Tecnologias/Ferramentas utilizadas
